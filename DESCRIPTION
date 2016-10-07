@@ -1,0 +1,16 @@
+Package: SqlRtools
+Title: Helper functions to work with Microsoft SQL Server R Services
+Version: 0.0.1
+Date: 2016-10-07
+Authors@R: c(
+      person("Andrie", "de Vries", role=c("aut", "cre"), email="adevries@microsoft.com"),
+      person(family="Microsoft Corporation", role="cph"),
+      person(family="Revolution Analytics", role="cph", comment="Code adapted from the foreach package")
+    )
+Copyright: COPYRIGHTS
+License: MIT + file LICENSE
+Description: Helper functions to work with Microsoft SQL Server R Services
+Imports:
+    RODBC
+LazyData: TRUE
+RoxygenNote: 5.0.1
