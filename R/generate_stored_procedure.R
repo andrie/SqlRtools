@@ -58,7 +58,10 @@ generate_stored_procedure <- function(sp_filename_stub, dbConnection, write = FA
   }
   outclasses <- spi_outclasses(spi_query, spi_r, dbConnection)
   
-  res <- sub("_RCODE", spi_read(spi_r),
+  RCODE <- spi_read(spi_r)
+  RCODE <- gsub("^ *#.*$", "", RCODE)
+  
+  res <- sub("_RCODE", RCODE,
              sub("_INPUT_QUERY_", spi_read(spi_query),
                  sub("_CLASSES_", outclasses, spi_read(spi_templ))
              ))
