@@ -60,7 +60,7 @@ generate_stored_procedure <- function(sp_filename_stub, dbConnection, write = FA
   
   RCODE <- strsplit(spi_read(spi_r), "\n")[[1]]
   RCODE <- gsub("^ *#.*$", "", RCODE)
-  ROCDE <- paste(RCODE, collapse = "\n")
+  RCODE <- paste(RCODE, collapse = "\n")
 
   res <- sub("_RCODE", RCODE,
              sub("_INPUT_QUERY_", spi_read(spi_query),
